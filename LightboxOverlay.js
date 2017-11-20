@@ -123,7 +123,7 @@ export default class LightboxOverlay extends Component {
           isPanning: true,
         });
         if ( this.isDoubleTap(currentTouchTimeStamp, gestureState) ) {
-          this.doubleTapZoom();
+          // this.doubleTapZoom();
         }
         this.prevTouchInfo = {
           prevTouchX: gestureState.x0,
@@ -206,16 +206,16 @@ export default class LightboxOverlay extends Component {
     return ( dt < this.delay && this.distance(prevTouchX, prevTouchY, x0, y0) < this.radius );
   }
 
-  doubleTapZoom(){
-    if (this.state.scale !== 1) {
-      this.resetOverlay();
-    } else {
-      this.setState({
-        scale : 1.8,
-        lastScale : 1.8,
-      });
-    }
-  }
+  // doubleTapZoom(){
+  //   if (this.state.scale !== 1) {
+  //     this.resetOverlay();
+  //   } else {
+  //     this.setState({
+  //       scale : 1.8,
+  //       lastScale : 1.8,
+  //     });
+  //   }
+  // }
 
   // reset children
   resetOverlay(){
